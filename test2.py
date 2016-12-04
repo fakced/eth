@@ -3,7 +3,11 @@
 
 import urllib2
 import json
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 from datetime import datetime
+
+
 
 #Parameters :
 symbol = 'ETH'
@@ -21,7 +25,9 @@ liste2 = []
 # 'https://www.cryptocompare.com/api/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1452470400'
 while timestamp != 1480676400: 
 	timestamp = str(timestamp)
-	url = 'https://www.cryptocompare.com/api/data/pricehistorical?fsym=' + symbol + '&tsyms='+ currency + '&ts=' + timestamp
+	url = (
+		'https://www.cryptocompare.com/api/data/pricehistorical?fsym={}&tsyms={}'&ts={}'.format(
+		symbol, currency, timestamp))
 
 	json_obj = urllib2.urlopen(url)
 
@@ -43,8 +49,7 @@ print (liste2)
 
 
 
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
+
 
 x = liste2
 # x = [datetime.datetime.now() + datetime.timedelta(hours=i) for i in range(17)]
