@@ -44,27 +44,16 @@ while timestamp != 1480676400:
 	#print timestamp
 
 
-print (liste)
-print (liste2)
-
-
-
+# print (liste)
+# print (liste2)
 
 
 x = liste2
-# x = [datetime.datetime.now() + datetime.timedelta(hours=i) for i in range(17)]
 y = liste
-
-
-# print x
-# print y
 
 # plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 # splt.gca().xaxis.set_major_locator(mdates.DayLocator())
+
 plt.plot(x,y)
-# plt.gcf().autofmt_xdate()
-
-
-# plt.plot([2016-11-15, 2016-11-16, 2016-11-18],[3,4,8])
 plt.gcf().autofmt_xdate()
 plt.show()
